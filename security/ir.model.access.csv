@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_gestion_formation_gestion_formation,gestion_formation.gestion_formation,model_gestion_formation_gestion_formation,,1,0,0,0
