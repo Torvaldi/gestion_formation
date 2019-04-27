@@ -1,2 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_gestion_formation_gestion_formation,gestion_formation.gestion_formation,model_gestion_formation_gestion_formation,,1,0,0,0
+access_gestion_formation_candidat,gestion_formation.candidat,model_gestion_formation_candidat,,1,0,0,0
+access_gestion_formation_formateur,gestion_formation.formateur,model_gestion_formation_formateur,,1,0,0,0
+access_gestion_formation_formation,gestion_formation.formation,model_gestion_formation_formation,,1,0,0,0
+access_gestion_formation_salle,gestion_formation.salle,model_gestion_formation_salle,,1,0,0,0
+access_gestion_formation_session,gestion_formation.session,model_gestion_formation_session,,1,0,0,0

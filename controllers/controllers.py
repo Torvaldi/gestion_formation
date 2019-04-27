@@ -10,10 +10,10 @@ class GestionFormation(http.Controller):
     def list(self, **kw):
         return http.request.render('gestion_formation.listing', {
             'root': '/gestion_formation/gestion_formation',
-            'objects': http.request.env['gestion_formation.gestion_formation'].search([]),
+            'objects': http.request.env['gestion_formation.formation'].search([]),
         })
 
-    @http.route('/gestion_formation/gestion_formation/objects/<model("gestion_formation.gestion_formation"):obj>/', auth='public')
+    @http.route('/gestion_formation/gestion_formation/objects/<model("gestion_formation.formation"):obj>/', auth='public')
     def object(self, obj, **kw):
         return http.request.render('gestion_formation.object', {
             'object': obj
