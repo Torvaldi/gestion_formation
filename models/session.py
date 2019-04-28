@@ -10,4 +10,4 @@ class session(models.Model):
     date_debut = fields.Date()
     date_fin = fields.Date()
     duree = fields.Char()
-    state = fields.Selection(['Prevue', 'Acceptée', 'En cours', 'Terminée'])
+    state = fields.Selection(selection=[('prevue', 'Prévue'), ('acceptee', 'Acceptée'), ('en_cours', 'En cours'), ('terminee','Terminée')])

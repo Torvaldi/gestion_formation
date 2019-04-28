@@ -12,6 +12,56 @@
         </tree>
       </field>
     </record>
+    
+    <record model="ir.ui.view" id="gestion_formation.list_formateur">
+      <field name="name">gestion_formation_formateur list</field>
+      <field name="model">gestion_formation.formateur</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="matricule"/>
+          <field name="diplome"/>
+        </tree>
+      </field>
+    </record>
+    
+    <record model="ir.ui.view" id="gestion_formation.list_salle">
+      <field name="name">gestion_formation_salle list</field>
+      <field name="model">gestion_formation.salle</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="libre"/>
+          <field name="nb_place"/>
+        </tree>
+      </field>
+    </record>
+    
+    <record model="ir.ui.view" id="gestion_formation.list_candidat">
+      <field name="name">gestion_formation_candidat list</field>
+      <field name="model">gestion_formation.candidat</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="num_ins"/>
+        </tree>
+      </field>
+    </record>
+    
+    <record model="ir.ui.view" id="gestion_formation.list_session">
+      <field name="name">gestion_formation_session list</field>
+      <field name="model">gestion_formation.session</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="nb_participant"/>
+          <field name="date_debut"/>
+          <field name="date_fin"/>
+          <field name="duree"/>
+          <field name="state"/>
+        </tree>
+      </field>
+    </record>
    
 
     <!-- actions opening views on models -->
@@ -21,23 +71,30 @@
       <field name="res_model">gestion_formation.formation</field>
       <field name="view_mode">tree,form</field>
     </record>
-   
 
-    <!-- server action to the one above -->
-    
-    <record model="ir.actions.server" id="gestion_formation.action_server">
-      <field name="name">gestion_formation server</field>
-      <field name="model_id" ref="model_gestion_formation_formation"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": self._name,
-        }
-      </field>
+    <record model="ir.actions.act_window" id="gestion_formation.action_window_candidats">
+      <field name="name">Liste des candidats</field>
+      <field name="res_model">gestion_formation.candidat</field>
+      <field name="view_mode">tree,form</field>
     </record>
-   
+
+    <record model="ir.actions.act_window" id="gestion_formation.action_window_formateurs">
+      <field name="name">Liste des formateurs</field>
+      <field name="res_model">gestion_formation.formateur</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="gestion_formation.action_window_salles">
+      <field name="name">Liste des salles</field>
+      <field name="res_model">gestion_formation.salle</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="gestion_formation.action_window_sessions">
+      <field name="name">Liste des sessions</field>
+      <field name="res_model">gestion_formation.session</field>
+      <field name="view_mode">tree,form</field>
+    </record>
 
     <!-- Top menu item -->
     
@@ -45,15 +102,25 @@
    
     <!-- menu categories -->
     
-    <menuitem name="Formations" id="gestion_formation.menu_1" parent="gestion_formation.menu_root"/>
-    <menuitem name="Salles" id="gestion_formation.menu_2" parent="gestion_formation.menu_root"/>
+    <menuitem name="Formations" id="gestion_formation.formations" parent="gestion_formation.menu_root"/>
+    <menuitem name="Formateurs" id="gestion_formation.formateurs" parent="gestion_formation.menu_root"/>
    
     <!-- actions -->
     
-    <menuitem name="Liste des formations" id="gestion_formation.menu_1_list" parent="gestion_formation.menu_1"
+    <menuitem name="Liste des formations" id="gestion_formation.formations_list" parent="gestion_formation.formations"
               action="gestion_formation.action_window"/>
-    <menuitem name="Server to list" id="gestion_formation" parent="gestion_formation.menu_2"
-              action="gestion_formation.action_server"/>
+
+    <menuitem name="Liste des candidats" id="gestion_formation.candidats_list" parent="gestion_formation.formations"
+              action="gestion_formation.action_window_candidats"/>
+
+    <menuitem name="Gestion des formateurs" id="gestion_formation.gestion_formateur" parent="gestion_formation.formateurs"
+              action="gestion_formation.action_window_formateurs"/>
+
+    <menuitem name="Gestion des salles" id="gestion_formation.gestion_salle" parent="gestion_formation.formateurs"
+              action="gestion_formation.action_window_salles"/>
+
+    <menuitem name="Gestion des sessions" id="gestion_formation.gestion_session" parent="gestion_formation.formateurs"
+              action="gestion_formation.action_window_sessions"/>
    
   </data>
 </odoo>
