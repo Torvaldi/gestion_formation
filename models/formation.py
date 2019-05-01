@@ -7,3 +7,4 @@ class formation(models.Model):
 
     name = fields.Char()
     price = fields.Float()
+    sessions = fields.One2many('gestion_formation.session', 'formation')

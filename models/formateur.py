@@ -8,3 +8,6 @@ class formateur(models.Model):
     name = fields.Char()
     matricule = fields.Integer()
     diplome = fields.Char()
+    sessions = fields.Many2many('gestion_formation.session')
+
+    _sql_constraints = [('matricule_unique', 'UNIQUE (matricule)', 'Numéro de matricule déjà utilisé')]

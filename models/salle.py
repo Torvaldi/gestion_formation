@@ -7,4 +7,5 @@ class salle(models.Model):
 
     name = fields.Char()
     libre = fields.Boolean()
-    nb_place = fields.Integer()
+    nb_place = fields.Integer(default='20')
+    sessions = fields.Many2many('gestion_formation.session')

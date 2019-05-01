@@ -7,3 +7,6 @@ class candidat(models.Model):
 
     name = fields.Char()
     num_ins = fields.Integer()
+    sessions = fields.Many2many('gestion_formation.session')
+
+    _sql_constraints = [('num_ins_unique', 'UNIQUE (num_ins)', 'Numéro d\'inscription déjà utilisé')]
