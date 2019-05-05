@@ -18,5 +18,18 @@
             </t>
           </dl>
         </template>
+
+        <template id="report_attestation_template">
+          <t t-call="report.html_container">
+            <t t-foreach="objects" t-as="object">
+              <t t-call="report.external_layout">
+                <div class="page">
+                  <h2>Attestation de participation</h2>
+                  <p>Formation : <span t-field="object.formation.name"/></p>
+                </div>
+              </t>
+            </t>
+          </t>
+        </template>
     </data>
 </odoo>
