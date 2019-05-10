@@ -1,0 +1,51 @@
+<odoo>
+    <data>
+        <!-- KANBAN -->
+        <record model="ir.ui.view" id="gestion_formation.list_candidat_kanban">
+            <field name="name">gestion_formation_candidat list</field>
+            <field name="model">gestion_formation.candidat</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="name" />
+                    <field name="num_ins" />
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_resource_details">
+                                <ul>
+                                    <li>
+                                        <field name="name" />
+                                    </li>
+                                    <li>
+                                        <field name="num_ins" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!-- LIST -->
+        <record model="ir.ui.view" id="gestion_formation.list_candidat">
+            <field name="name">gestion_formation_candidat list</field>
+            <field name="model">gestion_formation.candidat</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="num_ins" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="gestion_formation.action_window_candidats">
+            <field name="name">Liste des candidats</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">gestion_formation.candidat</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,kanban</field>
+        </record>
+    </data>
+</odoo>

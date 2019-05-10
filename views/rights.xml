@@ -1,6 +1,6 @@
 <odoo>
   <data>
-    <record id="group_gerant" model="res.groups">
+    <!-- <record id="group_gerant" model="res.groups">
       <field name="name">Gérant</field>
       <field name="category_id" ref="gestion_formation.gerant"/>
     </record>
@@ -8,6 +8,6 @@
     <record id="group_secretaire" model="res.groups">
       <field name="name">Secrétaire</field>
       <field name="category_id" ref="gestion_formation.secretaire"/>
-    </record>
+    </record> -->
   </data>
 </odoo>

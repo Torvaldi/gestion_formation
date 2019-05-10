@@ -27,6 +27,11 @@
         'views/views.xml',
         'views/templates.xml',
         'views/rights.xml',
+        'views/session.xml',
+        'views/candidat.xml',
+        'views/formateur.xml',
+        'views/formation.xml',
+        'views/salle.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
