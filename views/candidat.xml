@@ -4,11 +4,9 @@
         <record model="ir.ui.view" id="gestion_formation.list_candidat_kanban">
             <field name="name">gestion_formation_candidat list</field>
             <field name="model">gestion_formation.candidat</field>
-            <field name="type">form</field>
+            <field name="type">kanban</field>
             <field name="arch" type="xml">
                 <kanban>
-                    <field name="name" />
-                    <field name="num_ins" />
                     <templates>
                         <t t-name="kanban-box">
                             <div class="oe_resource_details">

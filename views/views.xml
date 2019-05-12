@@ -26,5 +26,8 @@
     <menuitem name="Gestion des sessions" id="gestion_formation.gestion_session" parent="gestion_formation.formateurs"
       action="gestion_formation.action_window_sessions" />
 
+    <menuitem name="Attestations" id="gestion_formation.attestation" parent="gestion_formation.formateurs"
+      action="gestion_formation.action_attestation" />
+
   </data>
 </odoo>

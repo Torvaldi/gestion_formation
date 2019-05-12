@@ -23,15 +23,18 @@
 
     # always loaded
     'data': [
+        'security/rights.xml',
         'security/ir.model.access.csv',
-        'views/views.xml',
         'views/templates.xml',
-        'views/rights.xml',
+        'wizard/wizard_attestation.xml',
+        #'views/rights.xml',
         'views/session.xml',
         'views/candidat.xml',
         'views/formateur.xml',
         'views/formation.xml',
         'views/salle.xml',
+        'views/attestation.xml',
+        'views/views.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

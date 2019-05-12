@@ -1,0 +1,27 @@
+<odoo>
+  <data>
+    <record id="attestation_view_tree" model="ir.ui.view">
+      <field name="name">attestation view tree</field>
+      <field name="model">gestion_formation.attestation</field>
+      <field name="type">tree</field>
+      <field name="arch" type="xml">
+        <tree string="attestation">
+          <field name="candidat" />
+          <field name="formation" />
+          <field name="description" />
+          <field name="date" />
+          <button string="Générer une attestation" type="action" name="%(gestion_formation.action_wattestation)d"
+            groups="GestionFormation.groupe_gerant,base.group_system" />
+        </tree>
+      </field>
+    </record>
+
+    <record id="gestion_formation.action_attestation" model="ir.actions.act_window">
+      <field name="name">Gestion des attestations</field>
+      <field name="res_model">gestion_formation.attestation</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+  </data>
+
+</odoo>

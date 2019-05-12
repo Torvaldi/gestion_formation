@@ -4,6 +4,7 @@
         <record model="ir.ui.view" id="gestion_formation.list_formateur_kanban">
             <field name="name">gestion_formation_formateur list kanban</field>
             <field name="model">gestion_formation.formateur</field>
+            <field name="type">kanban</field>
             <field name="arch" type="xml">
                 <kanban>
                     <templates>
