@@ -1,5 +1,29 @@
 <odoo>
   <data>
+    <record id="attestation_view_form" model="ir.ui.view">
+      <field name="name">attestation.view.form</field>
+      <field name="model">gestion_formation.attestation</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="attestation">
+          <sheet>
+            <group>
+              <field name="description" />
+              <field name="date" />
+            </group>
+            <notebook>
+              <page string="page 1">
+                <group>
+                  <field name="candidat" />
+                  <field name="formation" />
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
     <record id="attestation_view_tree" model="ir.ui.view">
       <field name="name">attestation view tree</field>
       <field name="model">gestion_formation.attestation</field>
@@ -10,8 +34,6 @@
           <field name="formation" />
           <field name="description" />
           <field name="date" />
-          <button string="Générer une attestation" type="action" name="%(gestion_formation.action_wattestation)d"
-            groups="GestionFormation.groupe_gerant,base.group_system" />
         </tree>
       </field>
     </record>

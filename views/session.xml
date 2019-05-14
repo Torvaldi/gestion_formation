@@ -19,6 +19,7 @@
       <field name="name">Liste des sessions</field>
       <field name="res_model">gestion_formation.session</field>
       <field name="view_mode">tree,form</field>
+      
     </record>
   </data>
 </odoo>

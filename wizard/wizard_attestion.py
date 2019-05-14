@@ -1,7 +1,7 @@
 from odoo import api,fields,models, _
 from datetime import datetime
 
-class wizard_attestation(models.TransientModel):
+class Wizard_attestation(models.TransientModel):
     _name="gestion_formation.wizard_attestation"
 
     @api.multi
@@ -22,7 +22,7 @@ class wizard_attestation(models.TransientModel):
                 'formation': session.formationId.id,
             })
 
+
     date=fields.Date()
     description=fields.Text()
-    candidat_ids = fields.Many2many('gestion_formation.candidat', 'attestation_candidat', 'attestation_id', 'candidat_id', default=candidats)
-
+    candidat_ids = fields.Many2many('gestion_formation.candidat','attestation_candidat','attestation_id','candidat_id',default=candidats)

@@ -2,19 +2,13 @@
   <data>
     <record id="wattestation_view_form" model="ir.ui.view">
       <field name="name">wizard.attestation.view.form</field>
-      <field name="model">gestion_formation.attestation</field>
+      <field name="model">gestion_formation.wizard_attestation</field>
       <field name="type">form</field>
       <field name="arch" type="xml">
         <form string="attestation">
-          <group>
-            <field name="date" />
-          </group>
-          <group>
-            <field name="description" />
-          </group>
-          <group>
-            <field name="candidat" />
-          </group>
+          <field name="date" />
+          <field name="description" />
+          <field name="candidat" />
           <footer>
             <button name="action_done" string="Confirmer" type="object" class="oe_highlight" />
             ou
@@ -26,7 +20,7 @@
 
     <record id="gestion_formation.action_wattestation" model="ir.actions.act_window">
       <field name="name">attestation</field>
-      <field name="res_model">gestion_formation.attestation</field>
+      <field name="res_model">gestion_formation.wizard_attestation</field>
       <field name="view_type">form</field>
       <field name="view_mode">form</field>
       <field name="target">new</field>
