@@ -1,0 +1,25 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="gestion_formation.list_session">
+      <field name="name">gestion_formation_session list</field>
+      <field name="model">gestion_formation.session</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name" />
+          <field name="nb_participant" />
+          <field name="date_debut" />
+          <field name="date_fin" />
+          <field name="duree" />
+          <field name="state" />
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="gestion_formation.action_window_sessions">
+      <field name="name">Liste des sessions</field>
+      <field name="res_model">gestion_formation.session</field>
+      <field name="view_mode">tree,form</field>
+      
+    </record>
+  </data>
+</odoo>
